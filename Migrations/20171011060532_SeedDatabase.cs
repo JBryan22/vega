@@ -23,6 +23,10 @@ namespace vega.Migrations
             migrationBuilder.Sql("INSERT INTO Models (Name, MakeID) VALUES ('Make3-ModelA', (SELECT ID FROM Makes WHERE Name = 'Make3'))");
             migrationBuilder.Sql("INSERT INTO Models (Name, MakeID) VALUES ('Make3-ModelB', (SELECT ID FROM Makes WHERE Name = 'Make3'))");
             migrationBuilder.Sql("INSERT INTO Models (Name, MakeID) VALUES ('Make3-ModelC', (SELECT ID FROM Makes WHERE Name = 'Make3'))");
+        
+            migrationBuilder.Sql("INSERT INTO Features (Name) VALUES ('Sunroof')");
+            migrationBuilder.Sql("INSERT INTO Features (Name) VALUES ('GPS')");
+            migrationBuilder.Sql("INSERT INTO Features (Name) VALUES ('Premium Audio')");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
